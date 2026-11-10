@@ -3,7 +3,7 @@ package com.apcraft;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.VillagerEntity;
-import net.minecraft.entity.passive.VillagerProfession;
+import net.minecraft.village.VillagerProfession;
 import net.minecraft.village.VillagerData;
 import net.minecraft.village.VillagerType;
 import net.minecraft.server.world.ServerWorld;
