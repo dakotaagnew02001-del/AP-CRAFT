@@ -49,9 +49,11 @@ public final class ApacheCrewSystems {
     }
     private static void setCondition(BoatEntity b,int i,int value) {
         String prefix="apcraft_ah64_"+COMPONENTS[i]+"_";
-        for(String tag:new HashSet<>(b.getCommandTags())) if(tag.startsWith(prefix))b.removeCommandTag(tag);
-        b.addCommandTag(prefix+Math.max(0,Math.min(100,value)));
+       for (String tag : new HashSet<>(b.getCommandTags())) {
+    if (tag.startsWith(prefix)) {
+        b.getCommandTags().remove(tag);
     }
+}
     private static boolean grounded(BoatEntity b) {return b.isOnGround() && b.getVelocity().lengthSquared()<0.04;}
     private static void inspectComponents(ServerPlayerEntity p,BoatEntity b) {
         message(p,"AH-64 COMPONENT CONDITION (training values):");
