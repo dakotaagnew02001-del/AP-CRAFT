@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "apcraft",
+  "version": "${version}",
+  "name": "A&P Craft",
+  "description": "FAA A&P mechanic tools, study quizzes and survival economy",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.apcraft.APCraft"
+    ],
+    "client": [
+      "com.apcraft.client.APCraftClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
