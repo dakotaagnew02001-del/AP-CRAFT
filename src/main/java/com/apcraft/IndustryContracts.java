@@ -84,7 +84,7 @@ public final class IndustryContracts {
         if(j.stage==2){p.sendMessage(Text.literal("TASK: "+VERIFY[type]),false);link(p,"Verify work","/industry verify");}
         if(j.stage==3){p.sendMessage(Text.literal("TASK: Document findings and close work order."),false);link(p,"Complete work order","/industry finish");}
     }
-    private static String site(VillagerEntity v){return v.getServerWorld().getRegistryKey().getValue()+":"+v.getBlockX()+":"+v.getBlockZ();}
+    private static String site(VillagerEntity v){return v.getWorld().getRegistryKey().getValue()+":"+v.getBlockX()+":"+v.getBlockZ();}
     private static int accept(ServerPlayerEntity p,int type){
         VillagerEntity v=manager(p,type);if(v==null){p.sendMessage(Text.literal("Talk to the appropriate industry manager."),false);return 0;}
         Job old=jobs.get(key(p));long day=p.getServerWorld().getTimeOfDay()/24000;
