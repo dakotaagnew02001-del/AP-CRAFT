@@ -7,7 +7,7 @@ import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.VillagerEntity;
-import net.minecraft.entity.passive.VillagerProfession;
+import net.minecraft.village.VillagerProfession;
 import net.minecraft.village.VillagerData;
 import net.minecraft.village.VillagerType;
 import net.minecraft.item.ItemStack;
