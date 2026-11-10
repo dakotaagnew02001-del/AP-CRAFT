@@ -121,7 +121,7 @@ public final class ApacheFlightSystems {
         b.setNoGravity(s.rotorRpm>65);
         b.setVelocity(motion);b.velocityModified=true;
         float yawAuthority=(float)(weakTail?0.25:1.8);
-        b.setYaw(b.getYaw()+s.pedal*yawAuthority*controlFactor);
+        b.setYaw((float)(b.getYaw()+s.pedal*yawAuthority*controlFactor));
         if(lift>0)b.fallDistance=0;
         b.requestTeleport(b.getX()+motion.x,b.getY()+motion.y,b.getZ()+motion.z);
         return true;
