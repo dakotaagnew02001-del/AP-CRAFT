@@ -57,7 +57,11 @@ public final class GroundVehicleSystems {
         return fallback;
     }
     private static void setStat(BoatEntity boat, String prefix, int value) {
-        for (String tag : boat.getCommandTags()) if (tag.startsWith(prefix)) boat.removeCommandTag(tag);
+        for (String tag : new java.util.HashSet<>(boat.getCommandTags())) {
+    if (tag.startsWith(prefix)) {
+        boat.getCommandTags().remove(tag);
+    }
+}
         boat.addCommandTag(prefix + Math.max(0, Math.min(prefix.equals("apcraft_trip_") || prefix.equals("apcraft_wear_") ? 10000 : 100, value)));
     }
     private static void message(ServerPlayerEntity p, String msg) { p.sendMessage(Text.literal("[A&P GARAGE] " + msg), false); }
