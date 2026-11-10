@@ -56,7 +56,7 @@ public class MechanicMenuScreen extends Screen {
         }
     }
     @Override public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        renderBackground(context,mouseX,mouseY,delta);
+        renderBackground(context);
         int x=(width-500)/2,y=(height-360)/2;
         context.fill(x,y,x+500,y+360,0xEE22252A);
         context.fill(x+4,y+28,x+137,y+320,0xFF333840);
